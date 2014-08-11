@@ -36,7 +36,7 @@ import android.os.Build;
 	private static final String TAG_SPECIALTY = "specialty";
 	private static String url = "http://192.168.2.9/test1.php";
 	private static final String TAG_CONTACTS = "contacts";
-
+	private static final String TAG_CONTACTS1 = "contacts1";
 	JSONArray contacts = null;
 
 	ArrayList<HashMap<String, String>> contactList;
