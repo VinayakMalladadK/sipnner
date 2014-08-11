@@ -11,9 +11,7 @@ import org.json.JSONObject;
 
 import com.example.spinner.R;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.os.AsyncTask;
