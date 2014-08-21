@@ -14,6 +14,7 @@ import com.example.spinner.R;
 
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,8 +22,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -77,6 +80,16 @@ import android.os.Build;
 		//String jsonStr = sh.makeServiceCall(url, ServiceHandler.POST);
 
 		//Log.d("Response: ", "> " + jsonStr);
+		
+		Button b = (Button) findViewById(R.id.button1);
+		b.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this,second.class));
+			}
+		});
         new GetContacts().execute();
     }
 
@@ -101,7 +114,7 @@ import android.os.Build;
 			String jsonStr = sh.makeServiceCall(url, ServiceHandler.POST);
 		
 			
-			if (jsonStr != null) {
+			if (jsonStr != null) {hi...
 				
 				try {
 					JSONObject jsonObj = new JSONObject(jsonStr);
